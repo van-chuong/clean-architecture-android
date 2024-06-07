@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">clean-chitecture</string>
+    <string name="format_yyyy_MM_dd">yyyy-MM-dd</string>
+</resources>
