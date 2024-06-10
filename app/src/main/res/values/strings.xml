@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">clean-chitecture</string>
     <string name="format_yyyy_MM_dd">yyyy-MM-dd</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="splash">Splash</string>
+    <string name="home">Home</string>
 </resources>

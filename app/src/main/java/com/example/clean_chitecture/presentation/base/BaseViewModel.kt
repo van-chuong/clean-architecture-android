@@ -3,7 +3,7 @@ package com.example.clean_chitecture.presentation.base
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.domain.shared.scheduler.DataResult
+import com.example.clean_chitecture.shared.scheduler.DataResult
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -22,7 +22,6 @@ abstract class BaseViewModel : ViewModel() {
         onSuccess: (T) -> Unit = {},
         onError: (Exception) -> Unit = {}
     ) = viewModelScope.launch {
-        isLoading.postValue(true)
         when (val result = onRequest()) {
             is DataResult.Success -> {
                 isSuccess.postValue(true)
@@ -38,5 +37,4 @@ abstract class BaseViewModel : ViewModel() {
         }
         isLoading.postValue(false)
     }
-
 }

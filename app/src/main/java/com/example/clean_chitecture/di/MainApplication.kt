@@ -1,12 +1,11 @@
 package com.example.clean_chitecture.di
 
 import android.app.Application
-import com.example.data.di.dataBaseModule
-import com.example.data.di.dataSourceModule
-import com.example.data.di.entityMapperModule
-import com.example.data.di.networkModule
-import com.example.data.di.repositoryModule
-import com.example.domain.di.useCaseModule
+import com.example.clean_chitecture.data.di.dataBaseModule
+import com.example.clean_chitecture.data.di.dataSourceModule
+import com.example.clean_chitecture.data.di.networkModule
+import com.example.clean_chitecture.data.di.repositoryModule
+import com.example.clean_chitecture.presentation.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -18,13 +17,10 @@ class MainApplication : Application() {
         super.onCreate()
 
         val modules = listOf(
-            repositoryModule,
-            entityMapperModule,
-            itemMapperModule,
             networkModule,
+            repositoryModule,
             dataBaseModule,
             dataSourceModule,
-            useCaseModule,
             viewModelModule,
         )
         startKoin {

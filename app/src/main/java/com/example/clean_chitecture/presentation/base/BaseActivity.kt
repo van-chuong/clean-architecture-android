@@ -10,7 +10,6 @@ abstract class BaseActivity<viewBinding : ViewBinding, viewModel : BaseViewModel
     protected abstract val viewModel: viewModel
     protected lateinit var viewBinding: viewBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBinding = inflateViewBinding(layoutInflater)
