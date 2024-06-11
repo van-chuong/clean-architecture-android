@@ -5,6 +5,7 @@ import com.example.clean_chitecture.data.di.dataBaseModule
 import com.example.clean_chitecture.data.di.dataSourceModule
 import com.example.clean_chitecture.data.di.networkModule
 import com.example.clean_chitecture.data.di.repositoryModule
+import com.example.clean_chitecture.data.di.serviceModule
 import com.example.clean_chitecture.presentation.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -19,6 +20,7 @@ class MainApplication : Application() {
         val modules = listOf(
             networkModule,
             repositoryModule,
+            serviceModule,
             dataBaseModule,
             dataSourceModule,
             viewModelModule,

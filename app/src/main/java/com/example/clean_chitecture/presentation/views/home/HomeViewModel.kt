@@ -2,7 +2,6 @@ package com.example.clean_chitecture.presentation.views.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.example.clean_chitecture.data.repository.MovieRepository
 import com.example.clean_chitecture.model.Movie
 import com.example.clean_chitecture.presentation.base.BaseViewModel

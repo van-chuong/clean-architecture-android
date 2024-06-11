@@ -1,9 +1,8 @@
 package com.example.clean_chitecture.data.repository
 
-import androidx.lifecycle.LiveData
-import com.example.clean_chitecture.shared.scheduler.DataResult
 import com.example.clean_chitecture.data.source.FavoriteDataSource
 import com.example.clean_chitecture.model.Movie
+import com.example.clean_chitecture.shared.scheduler.DataResult
 
 class FavoriteRepositoryImpl(
     private val favoriteDataSource: FavoriteDataSource.Local,

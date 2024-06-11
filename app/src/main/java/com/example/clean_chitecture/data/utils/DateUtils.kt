@@ -2,7 +2,8 @@ package com.example.clean_chitecture.data.utils
 
 import java.text.ParseException
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
+import java.util.Locale
 
 fun String.toDate(
     format: String, locale: Locale = Locale.getDefault()
@@ -25,5 +26,5 @@ fun Long.toTimeString(
     format: String, locale: Locale = Locale.getDefault()
 ): String? {
     if (format.isBlank()) return null
-    return SimpleDateFormat(format, locale)?.format(Date(this))
+    return SimpleDateFormat(format, locale).format(Date(this))
 }

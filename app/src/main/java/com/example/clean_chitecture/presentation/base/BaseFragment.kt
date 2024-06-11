@@ -17,11 +17,6 @@ abstract class BaseFragment<viewBinding : ViewBinding, viewModel : BaseViewModel
 
 //    var dialogManager: DialogManager? = null
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-//        dialogManager = DialogManagerImpl(getContext())
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _viewBinding = inflateViewBinding(inflater)
         return viewBinding.root

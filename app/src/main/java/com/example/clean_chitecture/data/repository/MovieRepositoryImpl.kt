@@ -1,10 +1,9 @@
 package com.example.clean_chitecture.data.repository
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import com.example.clean_chitecture.shared.scheduler.DataResult
 import com.example.clean_chitecture.data.source.MovieDataSource
 import com.example.clean_chitecture.model.MoviesResponse
+import com.example.clean_chitecture.shared.scheduler.DataResult
 
 
 class MovieRepositoryImpl(

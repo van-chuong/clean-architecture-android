@@ -3,7 +3,6 @@ package com.example.clean_chitecture.presentation.views.splash
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.example.clean_chitecture.data.repository.MovieRepository
 import com.example.clean_chitecture.model.Movie
 import com.example.clean_chitecture.presentation.base.BaseViewModel
@@ -17,7 +16,7 @@ class SplashViewModel(private val movieRepository: MovieRepository) : BaseViewMo
 
     init {
         loadAllData()
-        Log.d("Dataaaaa","Init")
+        Log.d("Dataaaaa", "Init")
     }
 
     private fun loadAllData() {

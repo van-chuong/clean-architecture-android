@@ -1,22 +1,14 @@
 package com.example.clean_chitecture.presentation.views.main
 
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.clean_chitecture.R
 import com.example.clean_chitecture.databinding.ActivityMainBinding
-import com.example.clean_chitecture.presentation.base.BaseActivity
 
 class MainActivity : AppCompatActivity() {
 
