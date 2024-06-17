@@ -7,6 +7,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.clean_chitecture.R
 import com.example.clean_chitecture.databinding.ActivityMainBinding
 
@@ -26,10 +27,32 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
+    private fun setUpBottomNavigation(navHostFragment: NavHostFragment) {
+        binding.bottomNavigation.setupWithNavController(navHostFragment.navController)
+    }
+
 
     private fun startRouter() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment?
         navHostFragment?.navController?.setGraph(R.navigation.nav_graph)
+
+        if (navHostFragment != null) {
+            setUpBottomNavigation(navHostFragment)
+            setUpView(navHostFragment)
+        }
+    }
+
+    private fun setUpView(navHostFragment: NavHostFragment) {
+        navHostFragment.navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            when (destination.id) {
+                R.id.sensor, R.id.user, R.id.room,
+                R.id.setting -> binding.bottomNavigation.visibility = View.VISIBLE
+
+                else -> {
+                    binding.bottomNavigation.visibility = View.GONE
+                }
+            }
+        }
     }
 
     /**

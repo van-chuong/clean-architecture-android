@@ -31,7 +31,7 @@ class SplashFragment : Fragment() {
 
         viewModel.isLoading.observe(viewLifecycleOwner) {
             if (!it) {
-                navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment())
+                navigate(SplashFragmentDirections.actionSplashToOnboarding())
             }
         }
 

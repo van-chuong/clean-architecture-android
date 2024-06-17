@@ -27,6 +27,7 @@ abstract class BaseFragment<viewBinding : ViewBinding, viewModel : BaseViewModel
         setUpView()
         bindView()
         registerLiveData()
+        handleEvent()
     }
 
     fun showLoading() {
@@ -40,6 +41,7 @@ abstract class BaseFragment<viewBinding : ViewBinding, viewModel : BaseViewModel
     abstract fun inflateViewBinding(inflater: LayoutInflater): viewBinding
     abstract fun setUpView()
     abstract fun bindView()
+    abstract fun handleEvent()
 
     open fun registerLiveData() {
         viewModel.run {
