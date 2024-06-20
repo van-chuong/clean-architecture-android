@@ -1,7 +1,7 @@
 package com.example.clean_chitecture.data.di
 
-import com.example.clean_chitecture.data.repository.FavoriteRepository
-import com.example.clean_chitecture.data.repository.FavoriteRepositoryImpl
+import com.example.clean_chitecture.data.repository.BuildingRepository
+import com.example.clean_chitecture.data.repository.BuildingRepositoryImpl
 import com.example.clean_chitecture.data.repository.MovieRepository
 import com.example.clean_chitecture.data.repository.MovieRepositoryImpl
 import com.google.gson.Gson
@@ -14,8 +14,7 @@ val repositoryModule = module {
         MovieRepositoryImpl(get())
     }
 
-    single<FavoriteRepository> {
-        FavoriteRepositoryImpl(get())
+    single<BuildingRepository> {
+        BuildingRepositoryImpl(get(), get())
     }
-
 }
