@@ -35,6 +35,10 @@ class SplashFragment : Fragment() {
             }
         }
 
+        viewModel.exception.observe(viewLifecycleOwner) {
+            Log.d("Dataaaaa", it.message.toString())
+        }
+
         Log.d("BuildConfig", BuildConfig.BASE_URL)
 
     }

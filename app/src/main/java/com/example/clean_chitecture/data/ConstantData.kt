@@ -9,4 +9,10 @@ object ConstantData {
     const val COMA_QUESTION = " = ?"
     const val FIRST_PAGE = 1
     const val FAVORITE_DATABASE: String = "FAVORITE_DATABASE"
+    const val BUILDING_DATABASE: String = "BUILDING_DATABASE"
+
+    const val GENERAL_POINT_URL = "https://projects.vngalaxy.vn/v1"
+    const val GENERAL_PROJECT_ID = "6673dd6b001388619bbe"
+    const val GENERAL_DATABASE_ID = "6673df3f003543e33df7"
+    const val GENERAL_BUILDING_COLLECTION_ID = "6673df61000fe1465d52"
 }

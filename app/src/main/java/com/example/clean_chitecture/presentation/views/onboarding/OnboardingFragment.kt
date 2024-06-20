@@ -1,7 +1,6 @@
 package com.example.clean_chitecture.presentation.views.onboarding
 
 import android.view.LayoutInflater
-import android.widget.Toast
 import com.example.clean_chitecture.databinding.FragmentOnboardingBinding
 import com.example.clean_chitecture.presentation.base.BaseFragment
 import com.example.clean_chitecture.shared.extensions.navigate
