@@ -1,5 +1,6 @@
 package com.example.clean_chitecture.shared.extensions
 
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
@@ -17,4 +18,3 @@ fun Fragment.navigate(directions: NavDirections, navOptions: NavOptions? = null)
         val nav = findNavController()
         nav.navigate(directions, navOptions)
     }
-

@@ -68,6 +68,10 @@ data class Building(
     @SerializedName("\$updatedAt")
     val updatedAt: String? = "",
 ) : Parcelable {
+    override fun toString(): String {
+        return name ?: ""
+    }
+
     companion object : BaseResponse<Building, Map<String, Any>>() {
         override fun fromDocument(document: Document<Map<String, Any>>): Building {
             val data = document.data

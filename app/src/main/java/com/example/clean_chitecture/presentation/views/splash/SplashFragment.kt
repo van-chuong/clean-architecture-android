@@ -28,9 +28,8 @@ class SplashFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel.isLoading.observe(viewLifecycleOwner) {
-            if (!it) {
+        viewModel.completedTasks.observe(viewLifecycleOwner) {
+            if (it == SplashViewModel.TOTAL_TASK) {
                 navigate(SplashFragmentDirections.actionSplashToOnboarding())
             }
         }
@@ -40,6 +39,5 @@ class SplashFragment : Fragment() {
         }
 
         Log.d("BuildConfig", BuildConfig.BASE_URL)
-
     }
 }

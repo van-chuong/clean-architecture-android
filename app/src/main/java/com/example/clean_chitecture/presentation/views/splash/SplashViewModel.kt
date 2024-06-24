@@ -10,38 +10,26 @@ import com.example.clean_chitecture.model.Movie
 import com.example.clean_chitecture.presentation.base.BaseViewModel
 
 class SplashViewModel(
-    private val movieRepository: MovieRepository,
     private val buildingRepository: BuildingRepository,
 ) : BaseViewModel() {
-    private val _movies = MutableLiveData<MutableList<Movie>>()
-    val movies: LiveData<MutableList<Movie>> get() = _movies
-
-    private val _loadingComplete = MutableLiveData<Boolean>()
-    val loadingComplete: LiveData<Boolean> get() = _loadingComplete
+    private val _completedTasks = MutableLiveData<Int>()
+    val completedTasks: LiveData<Int> get() = _completedTasks
 
     init {
+        _completedTasks.value = 0
         loadBuildings()
-        loadBuildingsLocal()
     }
 
     private fun loadBuildings() {
         launchTaskSync(
             onRequest = { buildingRepository.getAllBuilding() },
             onSuccess = {
-                Log.d("Dataaaaa Remote", it.toString())
                 if (it.isNotEmpty()) {
                     insertMultiBuildings(it)
                 }
 
+                incrementCompletedTasks()
             },
-            onError = { exception.value = it }
-        )
-    }
-
-    private fun loadBuildingsLocal() {
-        launchTaskSync(
-            onRequest = { buildingRepository.getAllBuildingLocal() },
-            onSuccess = { Log.d("Dataaaaa Local", it.toString()) },
             onError = { exception.value = it }
         )
     }
@@ -49,8 +37,16 @@ class SplashViewModel(
     private fun insertMultiBuildings(buildings: List<Building>) {
         launchTaskSync(
             onRequest = { buildingRepository.insertMultiBuildingsLocal(buildings) },
-            onSuccess = {},
+            onSuccess = { incrementCompletedTasks() },
             onError = { exception.value = it }
         )
+    }
+
+    private fun incrementCompletedTasks() {
+        _completedTasks.value = (_completedTasks.value ?: 0) + 1
+    }
+
+    companion object {
+        const val TOTAL_TASK = 2
     }
 }

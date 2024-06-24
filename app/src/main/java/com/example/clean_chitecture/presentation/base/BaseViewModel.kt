@@ -8,7 +8,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 abstract class BaseViewModel : ViewModel() {
-
     val isLoading = MutableLiveData<Boolean>()
     val isSuccess = MutableLiveData<Boolean>()
     val exception = MutableLiveData<Exception>()
@@ -35,6 +34,7 @@ abstract class BaseViewModel : ViewModel() {
 
             is DataResult.Loading -> {}
         }
+
         isLoading.postValue(false)
     }
 }

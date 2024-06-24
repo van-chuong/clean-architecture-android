@@ -12,4 +12,5 @@
     <string name="login">Đăng nhập</string>
     <string name="select_building">Chọn tòa nhà</string>
     <string name="confirm">Xác nhận</string>
+    <string name="select_building_note">Chọn toà nhà nơi bạn sinh sống</string>
 </resources>

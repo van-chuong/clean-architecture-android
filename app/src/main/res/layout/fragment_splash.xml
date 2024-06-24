@@ -7,13 +7,20 @@
     tools:context=".presentation.views.splash.SplashFragment">
 
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
+        app:cardCornerRadius="@dimen/corner_radius_extra_large"
+        app:cardElevation="@dimen/elevation_large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_height"
+            android:scaleType="center"
+            android:src="@mipmap/ic_launcher_foreground" />
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
