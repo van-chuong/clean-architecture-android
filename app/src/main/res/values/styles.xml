@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomTextInputLayoutShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="shapeAppearanceOverlay">@style/CustomTextInputLayoutShape</item>
+        <item name="hintTextAppearance">@style/TextContentNormal</item>
+    </style>
+
+    <style name="PrimaryButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_primary_bg</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="TextContentTitleLarge" parent="">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="TextContentTitleNormal" parent="">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="TextContentNormalSmall" parent="">
+        <item name="android:textColor">@color/text_third</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextContentNormal" parent="">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+<!--    <style name="TextContentTitle" parent="">-->
+<!--        <item name="android:textColor">@color/white</item>-->
+<!--        <item name="android:textSize">20sp</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--        <item name="android:background">#0C8CE9</item>-->
+<!--        <item name="android:paddingVertical">13.5dp</item>-->
+<!--        <item name="android:includeFontPadding">false</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextContentBold" parent="">-->
+<!--        <item name="android:textColor">@color/black</item>-->
+<!--        <item name="android:textSize">16sp</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--        <item name="android:paddingVertical">16.5dp</item>-->
+<!--        <item name="android:includeFontPadding">false</item>-->
+<!--        <item name="android:background">#EAF6FF</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextContentNormal" parent="">-->
+<!--        <item name="android:textColor">@color/black</item>-->
+<!--        <item name="android:textSize">16sp</item>-->
+<!--        <item name="android:textStyle">normal</item>-->
+<!--        <item name="android:paddingVertical">16.5dp</item>-->
+<!--        <item name="android:includeFontPadding">false</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--        <item name="android:background">#F5FBFF</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextContentTitleSmall" parent="">-->
+<!--        <item name="android:textColor">@color/white</item>-->
+<!--        <item name="android:textSize">10sp</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--        <item name="android:background">#0C8CE9</item>-->
+<!--        <item name="android:paddingVertical">11dp</item>-->
+<!--        <item name="android:includeFontPadding">false</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextContentBoldSmall" parent="">-->
+<!--        <item name="android:textColor">@color/black</item>-->
+<!--        <item name="android:textSize">10sp</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--        <item name="android:paddingVertical">11dp</item>-->
+<!--        <item name="android:includeFontPadding">false</item>-->
+<!--        <item name="android:background">#EAF6FF</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--    </style>-->
+
+
+
+</resources>
